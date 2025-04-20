@@ -15,8 +15,12 @@
     </div>
     <ul id="taskList"></ul>
   </div>
-
   <script src="8.js"></script>
 </body>
 
 </html>
+ <!-- Event delegation is used for better performance and maintainability. 
+       Instead of adding a click event to every single delete or edit button, 
+       a single event is added to the parent <ul>. This approach is faster, 
+       uses less memory, and works dynamically for newly added tasks. -->
+
