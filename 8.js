@@ -4,7 +4,6 @@ const taskList = document.getElementById('taskList');
 
 let tasks = [];
 
-// Add task to array and render
 addTaskBtn.addEventListener('click', () => {
   const taskText = taskInput.value.trim();
   if (taskText) {
@@ -14,7 +13,6 @@ addTaskBtn.addEventListener('click', () => {
   }
 });
 
-// Event Delegation: Handle clicks on task list
 taskList.addEventListener('click', (event) => {
   const li = event.target.closest('li');
   const index = li?.dataset.index;
@@ -25,7 +23,6 @@ taskList.addEventListener('click', (event) => {
   }
 });
 
-// Render tasks with delete buttons
 function renderTasks() {
   taskList.innerHTML = '';
   tasks.forEach((task, index) => {
